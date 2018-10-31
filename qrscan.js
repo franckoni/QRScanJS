@@ -45,7 +45,7 @@ QRReader.init = function (webcam_selector, baseurl) {
 
 		// Start video capturing
 		navigator.getUserMedia(constraints, function(stream) {
-			QRReader.webcam.src = window.URL.createObjectURL(stream);
+			QRReader.webcam.srcObject = stream;
 		}, function(err) {
 			console.log("Error in navigator.getUserMedia: " + err);
 		});
